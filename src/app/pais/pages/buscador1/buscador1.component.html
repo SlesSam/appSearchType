@@ -1,0 +1,40 @@
+<h2>Por serie</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-Input-Components
+        (onEnter)="buscarPais($event)"
+        (onDebounce)="sugerir($event)"
+        placeholder="Busca pais"
+        ></app-Input-Components>
+    </div>
+</div>
+
+<ul *ngIf="mostrarSugerencias" class="list-group">
+    <li *ngFor="let country of countrysSugeridos"
+       class="list-group-item list-group-item-action" >
+        <a class="nav-link" [routerLink]="['/verPais', country.altSpellings]">
+            {{country.name.common}}
+        </a>
+    </li>
+    <li class="list-group-item list-group-item-action"
+    (click)="showSugerencias">
+        <a class="nav-link">
+            Buscar "{{palabra}}"
+        </a>
+    </li>
+
+</ul>
+
+<hr>
+
+<div *ngIf="hayError" class="alert alert-danger">
+    No se encontro nada con esa palabra {{palabra}}
+</div>
+
+
+<div *ngIf="countrys.length>0" class="row">
+    <div class="col">
+        <app-informacionComponent [countrys]="countrys"></app-informacionComponent>
+    </div>
+</div>

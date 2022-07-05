@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Bandera</th>
+            <th>Estado</th>
+            <th>ciudad</th>
+            <th>population</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of countrys; let i =index ">
+            <td>{{i+1}}</td>
+            <td>
+                <img [src]="pais.coatOfArms.png" class="small-flag">
+            </td>
+            <td>{{pais.name.common}}</td>
+            <td>{{pais.capital}}</td>
+            <td>{{pais.population}}</td>
+            <td></td>
+        </tr>
+
+    </tbody>
+</table>
