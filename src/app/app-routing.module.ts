@@ -20,10 +20,10 @@ const routes: Routes = [
     path: 'buscador3',
     component: Buscador3Component
   },
-  // {
-  //       path: 'verPais/:id',
-  //       component: Buscador1Component
-  // },
+  {
+        path: 'verPais/:id',
+        component: VerPaisComponent
+  },
 
   {
     path: '**',

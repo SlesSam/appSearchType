@@ -1,0 +1,19 @@
+<div *ngIf="!country; else divCountry" class="alert alert-info">
+    Please wait...!!
+
+</div>
+
+
+
+
+
+<ng-template #divCountry>
+
+    <div class="row">
+        <div class="col-4">
+            <h1>Paìs: <small>{{country.name.common}}</small></h1>
+        </div>
+    </div>
+
+
+</ng-template>

@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Buscador1Component } from './pages/buscador1/buscador1.component';
 import { Buscador2Component } from './pages/buscador2/buscador2.component';
 import { Buscador3Component } from './pages/buscador3/buscador3.component';
-import { InputComponent } from './components/Input/Input.component';
-import { InformacionComponent } from './components/Informacion/informacion.component';
+import { InputComponent } from './components/FormPais/Input.component';
+import { InformacionComponent } from './components/List-Pais/informacion.component';
 import { RouterModule } from '@angular/router';
 
 

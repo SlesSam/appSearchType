@@ -22,11 +22,11 @@ export class Service {
   }
 
 
-  // getSugerencias(palabra:string):Observable<Country[]>{
-  //   const url = `${ this.API }/alpha/${ palabra }`;
+  getSugerencias(idTermino:string):Observable<Country>{
+    const url = `${ this.API }/alpha/${ idTermino }`;
 
-  //   return this.httpClient.get<Country[]>(url)
-  // }
+    return this.httpClient.get<Country>(url)
+  }
 
   ///////////////////////SERIES service 
 
